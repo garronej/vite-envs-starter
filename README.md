@@ -15,7 +15,7 @@ Assuming you have:
 
 `.env`
 ```env
-VITE_MY_VAR=
+VITE_MY_TITLE=
 ```
 
 ```ts
@@ -24,8 +24,8 @@ VITE_MY_VAR=
 
 import { env } from "env";
 
-// console.log(import.meta.env.VITE_MY_VAR);
-console.log(env.MY_VAR); // Without prefix.
+// console.log(import.meta.env.VITE_MY_TITLE);
+console.log(env.MY_TITLE); // Without prefix.
 ```
 
 In the `./index.html` you can use env variables as you would without vite-envs `%VITE_MY_VAR%`.  
