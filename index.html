@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%VITE_MY_TITLE%</title>
+
+    <% const obj = JSON.parse(process.env.MY_META); %>
+    <% for (const [key, value] of Object.entries(obj)) { %>
+      <meta name="<%= key %>" content="<%= value %>" />
+    <% } %>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
