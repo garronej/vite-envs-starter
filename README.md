@@ -1,7 +1,7 @@
 # Demo setup for [vite-envs](https://github.com/garronej/vite-envs)
 
 This is a "hello world" app to demonstrate how to set up [vite-envs](https://github.com/garronej/vite-envs)
-in your project.
+in a `Vite`/`TypeScript`/`Docker` WebApp.
 
 ## Try it
 
