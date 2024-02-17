@@ -48,6 +48,9 @@ You can do
   <head>
     <!-- ... -->
 
+    <title>%MY_TITLE%</title>
+    <!-- %VITE_MY_TITLE% works as well-->
+
     <% const obj = JSON.parse(process.env.MY_META); %>
     <% for (const [key, value] of Object.entries(obj)) { %>
       <meta name="<%= key %>" content="<%= value %>" />
