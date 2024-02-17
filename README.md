@@ -64,7 +64,7 @@ Reach http://localhost:8083
 +   "vite-envs": "^2.0.0",
  },
  "devDependencies": {
-+   "vite-tsconfig-paths": "^^4.3.1"
++   "vite-tsconfig-paths": "^4.3.1"
  }
 ```
 
