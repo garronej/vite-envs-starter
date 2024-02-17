@@ -41,6 +41,19 @@ VITE_MY_META='{ "foo": "value1", "bar": "value2", "baz": "value3" }'
 
 You can do 
 
+`index.html`
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ... -->
+
+    <% const obj = JSON.parse(process.env.MY_META); %>
+    <% for (const [key, value] of Object.entries(obj)) { %>
+      <meta name="<%= key %>" content="<%= value %>" />
+    <% } %>
+```
+
 `yarn dev`  
 
 ### In production environment
