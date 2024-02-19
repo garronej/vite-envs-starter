@@ -1,6 +1,6 @@
-# Demo setup for [vite-envs](https://github.com/garronej/vite-envs)
+# Starter setup for [vite-envs](https://github.com/garronej/vite-envs)
 
-This is a "hello world" app to demonstrate how to set up [vite-envs](https://github.com/garronej/vite-envs)
+This is a starter setup to demonstrate how to set up [vite-envs](https://github.com/garronej/vite-envs)
 in a `Vite`/`TypeScript`/`Docker` WebApp.
 
 ## Try it
@@ -60,7 +60,6 @@ docker run -it -p 8083:8080 \
 ```
 
 Reach http://localhost:8083 to see the result.  
-
 
 ## Config highlights  
 
