@@ -31,7 +31,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>
-        This is the dynamic title {env.MY_TITLE}
+        Title: <b>{import.meta.env.TITLE}</b>
       </p>
     </>
   )

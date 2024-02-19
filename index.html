@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>%VITE_MY_TITLE%</title>
+    <title>%TITLE%</title>
 
-    <% const obj = JSON.parse(process.env.MY_META); %>
+    <!-- JSON5 (https://json5.org/) is made available by vite-envs, 
+         JSON5 is an extension to JSON that aims to be easier to write and 
+         maintain by hand (e.g. for config files). -->
+    <% const obj = JSON5.parse(import.meta.env.CUSTOM_META || "{}"); %>
     <% for (const [key, value] of Object.entries(obj)) { %>
       <meta name="<%= key %>" content="<%= value %>" />
     <% } %>

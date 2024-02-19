@@ -51,12 +51,12 @@ way you are already used to.
 Now, however you can do that:  
 
 ```bash
-docker build -t garronej/vite-envs-demo-app:main .
+docker build -t garronej/vite-envs-starter:main .
 
 docker run -it -p 8083:80 \ 
     --env TITLE='Title from container env' \ 
     --env MY_META='{ foo: "value1", bar: "value2" }' \ 
-    garronej/vite-envs-demo-app:main
+    garronej/vite-envs-starter:main
 ```
 
 Reach http://localhost:8083 to see the result.  
@@ -88,6 +88,17 @@ export default defineConfig({
 })
 ```
 
+`package.json`
+```diff
+ "scripts": {
++  "prepare": "vite-envs update-types",
+   "dev": "vite",
+   "build": "tsc && vite build"
+ }
+```
+`npx vite-envs update-types` updates `src/vite-envs.d.ts` to make TypeScript aware of the 
+environment variables you have declared in you `.env` file.  
+This script is not strictly required it's just for a better development experience.  
 
 `Dockerfile`
 ```diff
