@@ -1,0 +1,18 @@
+node_modules
+
+dist
+
+.git
+.gitignore
+
+.env.local
+
+# IDE settings
+.idea
+.vscode
+
+yarn-error.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db

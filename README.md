@@ -53,9 +53,9 @@ Now, however you can do that:
 ```bash
 docker build -t garronej/vite-envs-starter:main .
 
-docker run -it -p 8083:80 \ 
-    --env TITLE='Title from container env' \ 
-    --env MY_META='{ foo: "value1", bar: "value2" }' \ 
+docker run -it -p 8083:8080 \
+    --env TITLE='Title from container env' \
+    --env CUSTOM_META='{ foo: "value1", bar: "value2" }' \
     garronej/vite-envs-starter:main
 ```
 

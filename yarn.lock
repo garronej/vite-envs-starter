@@ -1810,10 +1810,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-vite-envs@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-3.2.4.tgz#cc342a6a6a1bc7934ec0f6a233ca418b73486445"
-  integrity sha512-BZTwuvZtwztEcPcRwPhJMVkVchJEaLOq04MxEawg04ClWXLjbGCfGVu+3kiFq5Gc5sU5xIlmGdv1QGK7DF7dPQ==
+vite-envs@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-3.2.5.tgz#456a5eb70c096be2511cd2f74dfb7e48eea1a01b"
+  integrity sha512-FTHsT+U/cW9mR0G19ABjg+RvwoxA/luF++MDaf2fSsDMVBPCOQllhtxh2KJkEQ22hLDoSHkScYM4ueWCgvyB7w==
   dependencies:
     cheerio "^1.0.0-rc.12"
     dotenv "^16.4.4"
