@@ -36,7 +36,9 @@ console.log(`The title of the page is ${import.meta.env.TITLE}`);
 
     <!-- JSON5 (https://json5.org/) is made available by vite-envs, 
          JSON5 is an extension to JSON that aims to be easier to write and 
-         maintain by hand (e.g. for config files). -->
+         maintain by hand (e.g. for config files). 
+         You can also use YAML.parse()
+         -->
     <% const obj = JSON5.parse(import.meta.env.CUSTOM_META); %>
     <% for (const [key, value] of Object.entries(obj)) { %>
       <meta name="<%= key %>" content="<%= value %>" />

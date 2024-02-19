@@ -1810,16 +1810,17 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-vite-envs@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-3.2.5.tgz#456a5eb70c096be2511cd2f74dfb7e48eea1a01b"
-  integrity sha512-FTHsT+U/cW9mR0G19ABjg+RvwoxA/luF++MDaf2fSsDMVBPCOQllhtxh2KJkEQ22hLDoSHkScYM4ueWCgvyB7w==
+vite-envs@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-3.3.0.tgz#fb60d326b7c36a689273899a06678fdbbb253fc4"
+  integrity sha512-FESO30z/rucRbb1J298uNvuNHDm2YB5IGtinfKcWFOazCK5/qXENJejbaZqdsvt6xVCmVJJgnGcm+Ma17vkeUA==
   dependencies:
     cheerio "^1.0.0-rc.12"
     dotenv "^16.4.4"
     ejs "^3.1.9"
     json5 "^2.2.3"
     tsafe "^1.6.6"
+    yaml "^2.3.4"
 
 vite-plugin-commonjs@^0.10.1:
   version "0.10.1"
@@ -1882,6 +1883,11 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yaml@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.3.4.tgz#53fc1d514be80aabf386dc6001eb29bf3b7523b2"
+  integrity sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==
 
 yocto-queue@^0.1.0:
   version "0.1.0"
