@@ -28,11 +28,18 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <p>
-        Title: <b>{import.meta.env.TITLE}</b>
-      </p>
+      <p> Title: <b>{import.meta.env.TITLE}</b></p>
+      <p> Build time: <b>{new Date(import.meta.env.BUILD_TIME).toString()}</b></p>
+      <p> Version: <b>{import.meta.env.VERSION}</b></p>
     </>
   )
 }
+
+console.log("TITLE", import.meta.env.TITLE);
+console.log("SSR", import.meta.env.SSR);
+console.log("SSR2", import.meta.env["SSR"]);
+console.log("SSR3", import.meta.env['SSR']);
+console.log("SSR4", import.meta
+  .env['SSR']);
 
 export default App

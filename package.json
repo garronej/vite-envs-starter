@@ -1,7 +1,7 @@
 {
   "name": "vite-envs-starter",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "prepare": "vite-envs update-types",
@@ -15,7 +15,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite-envs": "^3.4.4",
+    "vite-envs": "^3.5.1",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^6.21.0",

@@ -1,5 +1,8 @@
 # Starter setup for [vite-envs](https://github.com/garronej/vite-envs)
 
+> NOTE: The current version requires the inclusion of node in the NGINX docker
+> image but I'm working on removing this dependency.  
+
 This is a starter setup to demonstrate how to set up [vite-envs](https://github.com/garronej/vite-envs)
 in a `Vite`/`TypeScript`/`Docker` WebApp.
 

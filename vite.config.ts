@@ -10,6 +10,23 @@ export default defineConfig({
   plugins: [
     react(), 
     commonjs(), 
-    viteEnvs()
+    viteEnvs({
+      // This is completely optional.  
+      // It enables you to define environment 
+      // variables that are computed at build time.
+      computedEnv: async ()=> {
+
+        const path = await import('path');
+        const fs = await import('fs/promises');
+
+        const packageJson = JSON.parse(await fs.readFile(path.resolve(__dirname, 'package.json'), 'utf-8'));
+
+        return {
+          BUILD_TIME: Date.now(),
+          VERSION: packageJson.version,
+        };
+
+      }
+    })
   ]
 })
