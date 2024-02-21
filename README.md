@@ -8,9 +8,9 @@ in a `Vite`/`TypeScript`/`Docker` WebApp.
 
 ## Try it
 
-Declare the variables that your webapp accept.  
+Declare the variables that your app will accept.  
 
-`.env`
+`.env` (Should be added to Git, if your `.env` is gitignored [you can use another file](#env-file-gitignored))
 ```.env
 TITLE=Default title
 CUSTOM_META=
@@ -18,7 +18,7 @@ CUSTOM_META=
 
 Set the values for your dev environment.  
 
-`.env.local` (This file shouldn't be added to Git)
+`.env.local` (Should be gitignored)
 ```.env
 TITLE=Custom title
 CUSTOM_META='{ foo: "value1", bar: "value2", baz: "value3" }'
@@ -169,3 +169,28 @@ This script is not strictly required it's just for a better development experien
 ```
 NOTE: Rest assured that the Docker images generated do **NOT** download `vite-envs` at runtime, only at build time.  
 You docker image does not requires an internet connection to start.  
+
+## `.env` file gitignored  
+
+If you don't want to add the `.env` file to Git you can use another file
+for declaring the variables names and default values.  
+
+`vite.config.ts`
+```diff
+ import { defineConfig } from 'vite'
+ import react from '@vitejs/plugin-react'
+ import { viteEnvs } from 'vite-envs'
+ 
+ // https://vitejs.dev/config/
+ export default defineConfig({
+   plugins: [
+     react(),
+     viteEnvs({
++      declarationFile: ".env.declaration"
+     })
+   ]
+ })
+```
+
+If you use another file that `.env` as your declaration files feel free to use the `.env`
+file in place of the `.env.local` file.  

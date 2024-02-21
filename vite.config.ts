@@ -11,10 +11,14 @@ export default defineConfig({
     react(),
     commonjs(),
     viteEnvs({
+
+      // Uncomment the following line to if your `.env` file is gitignored.
+      // declarationFile: ".env.declaration",
+      
       // This is completely optional.  
       // It enables you to define environment 
       // variables that are computed at build time.
-      computedEnv: async ({ resolvedConfig, /*env, envLocal*/ }) => {
+      computedEnv: async ({ resolvedConfig, /*declaredEnv, localEnv*/ }) => {
 
         const path = await import('path');
         const fs = await import('fs/promises');
