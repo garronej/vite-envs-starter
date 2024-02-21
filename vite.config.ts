@@ -14,14 +14,14 @@ export default defineConfig({
       // This is completely optional.  
       // It enables you to define environment 
       // variables that are computed at build time.
-      computedEnv: async (/*{ resolvedConfig, env, envLocal }*/) => {
+      computedEnv: async ({ resolvedConfig, /*env, envLocal*/ }) => {
 
         const path = await import('path');
         const fs = await import('fs/promises');
 
         const packageJson = JSON.parse(
           await fs.readFile(
-            path.resolve(__dirname, 'package.json'),
+            path.join(resolvedConfig.root, 'package.json'),
             'utf-8'
           )
         );
