@@ -116,7 +116,7 @@ Here are listed the configurations that diverges from a vanilla Vite/Docker setu
 `package.json`
 ```diff
  "devDependencies": {
-+    "vite-envs": "^2.0.0",
++    "vite-envs": "^3.5.4",
  }
 ```
 
