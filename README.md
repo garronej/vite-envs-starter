@@ -102,6 +102,13 @@ docker run -it -p 8083:8080 \
 
 Reach http://localhost:8083 🚀.  
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=wsY7VDUIZM0">
+    <img width="1000" alt="image" src="https://github.com/garronej/vite-envs/assets/6702424/9f79b37a-9cdd-40ce-be48-9475406e815d">
+  </a>
+  <p><i>Demo video</i></p>
+</p>
+
 ## Config highlights  
 
 Here are listed the configurations that diverges from a vanilla Vite/Docker setup.  
