@@ -197,6 +197,15 @@ file in place of the `.env.local` file.
 
 ## Publish and deploy  
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=anVek3aV3O4">
+    <img width="1000" alt="image" src="https://github.com/garronej/vite-envs/assets/6702424/7aa487fa-e084-4990-a15e-211f8e4fa02f">
+  </a>
+  <p><i>Publishing and deploying your Vite app Docker Image</i></p>
+</p>
+
+👉 [Step by step Guide](https://app.tango.us/app/workflow/Managing-GitHub-and-Docker-Settings-for-Repository-Workflow-Integration-f13fe5eae0f04985b26b1a6094e3c7eb).  
+  
 This starter comes with [a fully generic CI workflow](https://github.com/garronej/vite-envs/blob/main/.github/workflows/ci.yaml) that
 publishes the Docker image of your Vite App of DockerHub automatically.  
 You can copy past the `ci.yaml` file into your repo, there is nothing to change.  
@@ -204,7 +213,7 @@ It will publish the Docker image `<your github username>/<your vite repo name>`.
 
 To enable it simply create two GitHub secrets:  
  - `DOCKERHUB_USERNAME`  
- - `DOCKERHUB_TOKEN`  
+ - `DOCKERHUB_TOKEN`   
 
 To trigger the workflow just bump the version number in the `package.json` and push!  
 
