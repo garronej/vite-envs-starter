@@ -14,7 +14,7 @@ export default defineConfig({
 
       /*
        * Uncomment the following line if your `.env` file is gitignored and you want to
-       * use another file name for declaring your variables.
+       * use another file for declaring your variables.
        */
       // declarationFile: '.env.declaration',
       
