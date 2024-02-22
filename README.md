@@ -194,3 +194,19 @@ for declaring the variables names and default values.
 
 If you use another file that `.env` as your declaration files feel free to use the `.env`
 file in place of the `.env.local` file.  
+
+## Publish and deploy  
+
+This starter comes with [a fully generic CI workflow](https://github.com/garronej/vite-envs/blob/main/.github/workflows/ci.yaml) that
+publishes the Docker image of your Vite App of DockerHub automatically.  
+You can copy past the `ci.yaml` file into your repo, there is nothing to change.  
+It will publish the Docker image `<your github username>/<your vite repo name>`.  
+
+To enable it simply create two GitHub secrets:  
+ - `DOCKERHUB_USERNAME`  
+ - `DOCKERHUB_TOKEN`  
+
+To trigger the workflow just bump the version number in the `package.json` and push!  
+
+
+
