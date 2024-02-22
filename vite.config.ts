@@ -13,8 +13,8 @@ export default defineConfig({
     viteEnvs({
 
       /*
-       * Uncomment the following line if your `.env` file is gitignored and you want to
-       * use another file for declaring your variables.
+       * Uncomment the following line if `.env` is gitignored in your project.
+       * This enables you to use another file for declaring your variables.
        */
       // declarationFile: '.env.declaration',
       
