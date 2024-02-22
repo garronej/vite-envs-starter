@@ -12,12 +12,17 @@ export default defineConfig({
     commonjs(),
     viteEnvs({
 
-      // Uncomment the following line to if your `.env` file is gitignored.
+      /*
+       * Uncomment the following line if your `.env` file is gitignored and you want to
+       * use another file name for declaring your variables.
+       */
       // declarationFile: '.env.declaration',
       
-      // This is completely optional.  
-      // It enables you to define environment 
-      // variables that are computed at build time.
+      /*
+       * This is completely optional.  
+       * It enables you to define environment 
+       * variables that are computed at build time.
+       */
       computedEnv: async ({ resolvedConfig, /*declaredEnv, localEnv*/ }) => {
 
         const path = await import('path');
@@ -30,9 +35,11 @@ export default defineConfig({
           )
         );
 
-        // Here you can define any arbitrary value they will be available 
-        // in `import.meta.env` and it's type definitions.  
-        // You can also compute defaults for variable declared in `.env` files.
+        /*
+         * Here you can define any arbitrary value they will be available 
+         * in `import.meta.env` and it's type definitions.  
+         * You can also compute defaults for variable declared in `.env` files.
+         */
         return {
           BUILD_TIME: Date.now(),
           VERSION: packageJson.version
