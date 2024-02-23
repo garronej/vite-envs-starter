@@ -195,13 +195,17 @@ for declaring the variables names and default values.
 If you use another file that `.env` as your declaration files feel free to use the `.env`
 file in place of the `.env.local` file.  
 
-## Publish and deploy  
+## Publishing and deploying the Docker image of your Vite App  
+
+There's nothing else you need to know to start using `vite-envs`, however if you're interested, 
+here are some instruction that you can follow to publish your Docker image on DockerHub with GitHub Actions
+and deploying the image using Railway, all for Free.  
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=anVek3aV3O4">
     <img width="1000" alt="image" src="https://github.com/garronej/vite-envs/assets/6702424/7aa487fa-e084-4990-a15e-211f8e4fa02f">
   </a>
-  <p><i>Publishing and deploying your Vite app Docker Image</i></p>
+  <p align="center"><i>Publishing and deploying your Vite app Docker Image</i></p>
 </p>
 
 👉 [Step by step Guide](https://app.tango.us/app/workflow/Managing-GitHub-and-Docker-Settings-for-Repository-Workflow-Integration-f13fe5eae0f04985b26b1a6094e3c7eb).  
