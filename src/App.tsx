@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { SourceMapTest } from "./SourceMapTest";
 import './App.css'
 
 function App() {
@@ -30,7 +31,18 @@ function App() {
       </p>
       <p> Title: <b>{import.meta.env.TITLE}</b></p>
       <p> Built <b>{((Date.now() - import.meta.env.BUILD_TIME)/1000).toFixed(0)} seconds ago</b></p>
-      <p> Version: <b>{import.meta.env.VERSION}</b></p>
+      <p> Version: <b>{(()=>{
+
+        const { VERSION } = import.meta.env;
+
+        return VERSION;
+
+      })()}</b></p>
+      <p> SSR: <b>{import.meta.env.SSR ? 'true' : 'false'}</b></p>
+      <p> SSR: <b>{import.meta.env[
+        'SSR'
+      ] ? 'true' : 'false'}</b></p>
+      <SourceMapTest />
     </>
   )
 }
