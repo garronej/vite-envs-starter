@@ -9,7 +9,7 @@ type ImportMetaEnv = {
   BUILD_TIME: number
   VERSION: string
   TITLE: string
-  CUSTOM_META: string
+  DESCRIPTION: string
   // @user-defined-start
   /*
    * Here you can define your own special variables

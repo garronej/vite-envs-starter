@@ -44,8 +44,7 @@ export default defineConfig({
           VERSION: packageJson.version
         };
 
-      }, 
-      indexAsEjs: true
+      }
     })
   ],
   build: {

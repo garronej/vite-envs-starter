@@ -8,10 +8,7 @@ RUN yarn build
 
 # production environment
 FROM nginx:stable-alpine
-RUN apk add --update nodejs npm
 COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
 WORKDIR /usr/share/nginx/html
 COPY --from=build /app/dist .
-RUN npm i -g json5@2.2.3
-RUN npm i -g vite-envs@`node -e 'console.log(require("./.vite-envs.json").version)'`
-ENTRYPOINT sh -c "npx vite-envs && nginx -g 'daemon off;'"
+ENTRYPOINT sh -c "./vite-envs.sh && nginx -g 'daemon off;'"
