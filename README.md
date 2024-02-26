@@ -38,10 +38,10 @@ console.log(`The title of the page is ${import.meta.env.TITLE}`);
 
     <title>%TITLE%</title>
 
-    <!-- JSON5 (https://json5.org/) is made available by vite-envs, 
+    <!-- JSON5 (https://json5.org/) is made available by vite-envs (if it's installed, explained later).  
          JSON5 is an extension to JSON that aims to be easier to write and 
          maintain by hand (e.g. for config files). 
-         You can also use YAML.parse()
+         You can also use YAML.parse() (if it's installed)
          -->
     <% const obj = JSON5.parse(import.meta.env.CUSTOM_META); %>
     <% for (const [key, value] of Object.entries(obj)) { %>
@@ -117,6 +117,9 @@ Here are listed the configurations that diverges from a vanilla Vite/Docker setu
 ```diff
  "devDependencies": {
 +    "vite-envs": "^3.5.4",
+     // NOTE: Only install json5 and/or yaml if you use them in your EJS context!  
++    "json5": "2.2.3",
++    "yaml": "2.4.0"
  }
 ```
 
@@ -130,7 +133,10 @@ Here are listed the configurations that diverges from a vanilla Vite/Docker setu
 export default defineConfig({
   plugins: [
     react(), 
-+   viteEnvs()
++   viteEnvs({
++     indexAsEjs: true
++   })
+})
   ]
 })
 ```
@@ -163,12 +169,13 @@ This script is not strictly required it's just for a better development experien
  COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
  WORKDIR /usr/share/nginx/html
  COPY --from=build /app/dist .
++# NOTE: Only install json5 and/or yaml if you actually use them in your EJS.  
++RUN npm i -g json5@2.2.3
++RUN npm i -g yaml@2.4.0
 +RUN npm i -g vite-envs@`node -e 'console.log(require("./.vite-envs.json").version)'`
 -ENTRYPOINT sh -c "nginx -g 'daemon off;'"
 +ENTRYPOINT sh -c "npx vite-envs && nginx -g 'daemon off;'"
 ```
-NOTE: Rest assured that the Docker images generated do **NOT** download `vite-envs` at runtime, only at build time.  
-You docker image does not requires an internet connection to start.  
 
 ## `.env` file gitignored  
 
@@ -220,6 +227,3 @@ To enable it simply create two GitHub secrets:
  - `DOCKERHUB_TOKEN`   
 
 To trigger the workflow just bump the version number in the `package.json` and push!  
-
-
-

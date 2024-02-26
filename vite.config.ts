@@ -11,7 +11,6 @@ export default defineConfig({
     react(),
     commonjs(),
     viteEnvs({
-
       /*
        * Uncomment the following line if `.env` is gitignored in your project.
        * This enables you to use another file for declaring your variables.
@@ -45,7 +44,8 @@ export default defineConfig({
           VERSION: packageJson.version
         };
 
-      }
+      }, 
+      indexAsEjs: true
     })
   ],
   build: {
