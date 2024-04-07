@@ -22,7 +22,7 @@ export default defineConfig({
        * It enables you to define environment 
        * variables that are computed at build time.
        */
-      computedEnv: async ({ resolvedConfig, /*declaredEnv, localEnv*/ }) => {
+      computedEnv: async ({ resolvedConfig, /*declaredEnv, dotEnvLocal*/ }) => {
 
         const path = await import('path');
         const fs = await import('fs/promises');
