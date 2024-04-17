@@ -127,11 +127,12 @@ export default defineConfig({
 `package.json`
 ```diff
  "scripts": {
-+  "prepare": "vite-envs update-types",
++  "postinstall": "vite-envs update-types",
    "dev": "vite",
    "build": "tsc && vite build"
  }
 ```
+
 `npx vite-envs update-types` updates `src/vite-envs.d.ts` to make TypeScript aware of the 
 environment variables you have declared in you `.env` file.  
 This script is not strictly required it's just for a better development experience.  
