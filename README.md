@@ -3,6 +3,9 @@
 This is a starter setup to demonstrate how to set up [vite-envs](https://github.com/garronej/vite-envs)
 in a `Vite`/`TypeScript`/`Docker` WebApp.
 
+> NOTE: Running the `./dist/vite-envs.sh` script is completely optional. If you don't 
+> everything will work as if you weren't using vite-envs.  
+
 ## Try it
 
 Declare the variables that your app will accept.  
