@@ -18,7 +18,7 @@ DESCRIPTION=
 
 Set the values for your dev environment.  
 
-`.env.local` (Should be gitignored)
+`.env.local` (Should be gitignored, it can also be the `.env` file if you decided to use another file for declaring your variables)
 ```.env
 TITLE=Custom title
 DESCRIPTION="Custom description"
