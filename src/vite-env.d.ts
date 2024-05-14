@@ -10,6 +10,7 @@ type ImportMetaEnv = {
   VERSION: string
   TITLE: string
   DESCRIPTION: string
+  FOO: string
   // @user-defined-start
   /*
    * Here you can define your own special variables

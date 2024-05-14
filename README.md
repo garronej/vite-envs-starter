@@ -258,6 +258,18 @@ importScripts("swEnv.js");
 self.__VITE_ENVS.MY_VAR;
 ```
 
+## Encoding/escaping issues  
+
+It can be challenging to define some values in the .env files due to the lack of escaping capabilities.  
+Especially when you need to use a combination of `"`, `'` and `#` characters.  
+
+To tackle this cases vite-envs enable you to passes your envs as b64 values like:  
+
+`.env` or `.env.local`
+```env
+FOO="vite-envs:b64Decode(VmFsdWUgb2YgRk9P)" # In your code `import.meta.env.FOO will === "Value of FOO"`
+```
+
 ## Publishing and deploying the Docker image of your Vite App  
 
 There's nothing else you need to know to start using `vite-envs`, however if you're interested, 
