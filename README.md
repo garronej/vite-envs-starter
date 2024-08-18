@@ -200,6 +200,8 @@ This is useful if you want to perform operation like the following:
 </head>
 ```
 
+> 💡: YAML.parse() is also available in the EJS global scope if you need it.
+
 To enable this feature:  
 
 `vite.config.ts`
@@ -216,16 +218,6 @@ To enable this feature:
  })
 ```
 
-(OPTIONAL) If you want to have access to [`JSON5`](https://json5.org/) and/or [`YAML`](https://www.npmjs.com/package/yaml) in your EJS context.
-
-`package.json`
-```diff
- "devDependencies": {
-+  "json5": "2.2.3",
-+  "yaml": "2.4.0"
- }
-```
-
 `Dockerfile`
 ```diff
  # production environment
@@ -234,8 +226,6 @@ To enable this feature:
  COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
  WORKDIR /usr/share/nginx/html
  COPY --from=build /app/dist .
-+RUN npm i -g json5@2.2.3 
-+RUN npm i -g yaml@2.4.0
 +RUN npm i -g vite-envs@`node -e 'console.log(require("./.vite-envs.json").version)'`
 -ENTRYPOINT sh -c "./vite-envs.sh && nginx -g 'daemon off;'"
 +ENTRYPOINT sh -c "npx vite-envs && nginx -g 'daemon off;'"
