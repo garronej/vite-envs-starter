@@ -78,7 +78,7 @@ export default defineConfig({
 })
 ```
 
-Now, however you can do that:  
+Run build and run your docker image with environment variables.:  
 
 ```bash
 docker build -t garronej/vite-envs-starter:main .
