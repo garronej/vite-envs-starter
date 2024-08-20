@@ -179,6 +179,32 @@ for declaring the variables names and default values.
 If you use another file that `.env` as your declaration files feel free to use the `.env`
 file in place of the `.env.local` file.  
 
+## Dynamic `BASE_URL`  
+
+When deploying your app, it’s common to specify a base URL if it will be served from a subpath, such as `https://domain.com/dashboard`.  
+In this scenario, you would typically configure Vite with `base: '/dashboard/'` in your `vite.config.ts` file, and access this path within 
+your code using `import.meta.env.BASE_URL`, which would then equal `/dashboard/`.
+
+However, what if you don’t know the deployment path ahead of time?  
+`vite-envs` allows you to define a dynamic `BASE_URL` that you'll be able to specify at container startup.  
+
+To set up a dynamic BASE_URL, declare it in your .env file (or whichever file you use for environment variables). For example:  
+
+`.env`
+```env
+BASE_URL=/
+```
+
+With vite-envs aware of the `BASE_URL` variable, you can now specify it as an environment variable when running your Docker container.  
+
+```bash
+docker run -it -p 8083:8080 \
+    --env BASE_URL='/dashboard/' \
+    garronej/vite-envs-starter:main
+```
+
+> NOTE: If you implement this approach the `base` field in your `vite.config.ts` will be ignored.  
+
 ## EJS  
 
 > Caveats: Enabling EJS requires to have Node available in you Docker container
