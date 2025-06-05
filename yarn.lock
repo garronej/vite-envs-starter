@@ -1663,10 +1663,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-vite-envs@^4.4.5:
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-4.4.5.tgz#a8cfa780dbf7984ee28fa34f2c316ad1f9967c1f"
-  integrity sha512-/fFJB2fkUM8U/qb3AAf9H1tt6vltAiiqMZScoAzne4pm0WPivWKS6hyJV4ei64C5M869FyBQ00M7wkuRVCy/9Q==
+vite-envs@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-4.6.1.tgz#c8ab6ecf3ead1097ab3e150b7a83d30e29273f02"
+  integrity sha512-ZVAwXI5eT2NDJiKKb45b8/s5aXrFQtJosDJOoAE2CAzA5/t6RE1cIhCz857Dj6ICTyLEVJa6phEszDTeFmzZYg==
 
 vite-plugin-commonjs@^0.10.1:
   version "0.10.1"
