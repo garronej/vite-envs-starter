@@ -190,7 +190,7 @@ For some usecases placeholder substitution like `%FOO%` in the `index.html` is n
 This enables you to generate different HTML based on the environment variables values.  
 This is useful if you want to perform operation like the following:  
 
-``html
+```html
 <html>
   <head>
     <% const obj = JSON5.parse(import.meta.env.CUSTOM_META); %>
