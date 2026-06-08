@@ -1,4 +1,3 @@
-/// <reference types="vite-envs/client" />
 
 
 type ImportMetaEnv = {
