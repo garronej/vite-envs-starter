@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 import commonjs from 'vite-plugin-commonjs'
 import { viteEnvs } from 'vite-envs'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -16,38 +16,36 @@ export default defineConfig({
        * This enables you to use another file for declaring your variables.
        */
       // declarationFile: '.env.declaration',
-      
+
       /*
-       * This is completely optional.  
-       * It enables you to define environment 
+       * This is completely optional.
+       * It enables you to define environment
        * variables that are computed at build time.
        */
-      computedEnv: async ({ resolvedConfig, /*declaredEnv, dotEnvLocal*/ }) => {
-
-        const path = await import('path');
-        const fs = await import('fs/promises');
+      computedEnv: async ({ resolvedConfig /*declaredEnv, dotEnvLocal*/ }) => {
+        const path = await import("path");
+        const fs = await import("fs/promises");
 
         const packageJson = JSON.parse(
           await fs.readFile(
-            path.join(resolvedConfig.root, 'package.json'),
-            'utf-8'
-          )
+            path.join(resolvedConfig.root, "package.json"),
+            "utf-8",
+          ),
         );
 
         /*
-         * Here you can define any arbitrary value they will be available 
-         * in `import.meta.env` and it's type definitions.  
+         * Here you can define any arbitrary value they will be available
+         * in `import.meta.env` and it's type definitions.
          * You can also compute defaults for variable declared in `.env` files.
          */
         return {
           BUILD_TIME: Date.now(),
-          VERSION: packageJson.version
+          VERSION: packageJson.version,
         };
-
-      }
-    })
+      },
+    }),
   ],
   build: {
-    sourcemap: true
-  }
-})
+    sourcemap: true,
+  },
+});

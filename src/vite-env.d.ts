@@ -35,3 +35,4 @@ interface ImportMeta {
 
   glob: import('vite-envs/types/importGlob').ImportGlobFunction
 }
+
