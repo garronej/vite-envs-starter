@@ -28,7 +28,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12",
-    "vite-envs": "^4.6.2",
+    "vite-envs": "^4.7.0",
     "vite-plugin-commonjs": "^0.10.4"
   }
 }
