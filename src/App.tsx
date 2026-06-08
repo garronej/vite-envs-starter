@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import { SourceMapTest } from "./SourceMapTest";
 import './App.css'
 
+const secondsSinceBuild = ((Date.now() - import.meta.env.BUILD_TIME) / 1000).toFixed(0)
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -30,7 +32,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p> Title: <b>{import.meta.env.TITLE}</b></p>
-      <p> Built <b>{((Date.now() - import.meta.env.BUILD_TIME)/1000).toFixed(0)} seconds ago</b></p>
+      <p> Built <b>{secondsSinceBuild} seconds ago</b></p>
       <p> Version: <b>{(()=>{
 
         const { VERSION } = import.meta.env;
