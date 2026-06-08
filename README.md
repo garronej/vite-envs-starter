@@ -105,7 +105,7 @@ Here are listed the configurations that diverges from a vanilla Vite/Docker setu
 `package.json`
 ```diff
  "devDependencies": {
-+    "vite-envs": "^3.5.4",
++    "vite-envs": "^4.6.2",
  }
 ```
 
@@ -179,7 +179,7 @@ for declaring the variables names and default values.
 If you use another file that `.env` as your declaration files feel free to use the `.env`
 file in place of the `.env.local` file.  
 
-## EJS  
+## EJS (Very optional)
 
 > Caveats: Enabling EJS requires to have Node available in you Docker container
 > this will add an extra 20MB to your docker image size.  
